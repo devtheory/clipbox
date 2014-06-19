@@ -9,8 +9,8 @@
 
                   <p class="lead">Save your bookmarks to the cloud and share them with your friends!
                     <% unless current_user %>
-                      <%= link_to "Sign in", about_path, class: 'btn btn-lg btn-info' %> OR
-                      <%= link_to "Sign up", about_path, class: 'btn btn-lg btn-info' %>
+                      <%= link_to "Sign in", new_user_session_path, class: 'btn btn-lg btn-info' %> OR
+                      <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-lg btn-info' %>
                       <a class="btn-link btn btn-default btn-lg" style="margin:20px 10px;"><span class="glyphicon glyphicon-expand"></span>View demo</a>
                     <% end %>
                   </p>
