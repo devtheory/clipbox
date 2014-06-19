@@ -1,1 +1,55 @@
 @import "bootstrap";
+.top-section{
+    padding: 120px 0px 0px;
+     background: #2F92D5 ;   
+     color:#FFFFFF;
+     width:100%;
+     min-height:340px;
+     position: relative;
+}
+
+.top-section h1{
+    font-size:72px
+  }
+
+.footer-section{
+     padding: 150px 0px 0px;
+     background: #0778A6 ;   
+     color:#FFFFFF;
+     width:100%;
+     min-height:340px;
+     position: relative;
+}
+
+.footer-section ul li a{
+    color:#fff;
+}
+
+.features-section{
+    padding:100px 0px;
+}
+
+.clouds-bg{
+display:inline-block;
+width:100%;
+height:70px;
+background:  url('http://charlesmarshall.co.uk/demos/css3-animation/images/cloud.png') top center repeat-x; 
+position:absolute;
+bottom:-10px;
+left:0px;
+background-size: auto 100%;
+}
+
+.top-section .btn-link{
+    color:#fff;
+    margin-bottom:30px;
+}
+
+.navbar-default{
+    /*background:none;*/
+}
+
+.carousel-control.right,
+.carousel-control.left{
+    background-image: none;
+}
