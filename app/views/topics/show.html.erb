@@ -1,1 +1,13 @@
-<h3><%= @topic.name %></h3>
+<section class="top-section" style="padding-top:50px">
+<div class="container">
+  <h2>Clippings</h2>
+  <div class="row">
+    <% @bookmarks.each do |bookmark| %>
+      <div class="col-lg-4 col-sm-6 col-xs-12">
+          <%= link_to(image_tag("http://placehold.it/800x600&text=#{bookmark.link}"), bookmark.link, target: "_blank", class: 'thumbnail img-responsive') %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="clouds-bg"></div>
+</section>

@@ -1,5 +1,14 @@
-<h3>Topics</h3>
-
-<% @topics.each do |topic| %>
-  <%= topic.name %>
-<% end %>
+<section class="top-section" style="padding-top:50px">
+<div class="container">
+  <h1>Boxes</h1>
+  <div class="row">
+    <% @topics.each do |topic| %>
+      <div class="col-lg-4 col-sm-6 col-xs-12">
+        <%= topic.name %>
+          <%= link_to(image_tag("http://placehold.it/800x600&text=#{topic.name}"), topic_path(topic), class: 'thumbnail img-responsive') %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="clouds-bg"></div>
+</section>
