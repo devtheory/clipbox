@@ -5,15 +5,16 @@ class BookmarksController < ApplicationController
   end
 
   def create
-    
+
   end
 
   def index
-
+    @bookmarks = Bookmark.all
   end
 
   def show
-
+    @topic = Topic.find(params[:topic_id])
+    @bookmark = Bookmark.find(params[:id])
   end
 
   def destroy
