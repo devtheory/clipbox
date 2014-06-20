@@ -1,0 +1,7 @@
+<h3>New Topic</h3>
+
+<%= form_for @topic do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit "Save" %>
+<% end %>
