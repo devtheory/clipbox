@@ -4,8 +4,4 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def send_email
-    UserMailer.welcome(current_user).deliver
-  end
-
 end
