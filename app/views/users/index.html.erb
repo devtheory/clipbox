@@ -1,8 +1,13 @@
-<br />
-<br />
+<section class="top-section" style="padding-top:50px">
 <div class="container">
-  <% @users.each do |user| %>
-    <%= user.name %>
-    <%= image_tag(user.image) %>
+  <h1>My Clippings</h1>
+  <% @topics_hash.each do |key,array| %>
+    <h3><%= Topic.find(key).name %></h3>
+    <%= array.each do |b| %>
+      <p><a class="embedly-card" href="http://www.yahoo.com"></a></p>
+      <% end %>
   <% end %>
 </div>
+<br />
+<div class="clouds-bg"></div>
+</section>

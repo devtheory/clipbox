@@ -24,6 +24,13 @@ class TopicsController < ApplicationController
   def show
     @topic = Topic.find(params[:id])
     @bookmarks = @topic.bookmarks.all
+    @mybookmarks = @topic.bookmarks.where(user_id: current_user.id)
+    @favorites = []
+    @bookmarks.each do |bookmark|
+      if current_user.favorited(bookmark)
+        @favorites << bookmark
+      end
+    end
   end
 
   def edit

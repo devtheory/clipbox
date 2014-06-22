@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :bookmarks
+  has_many :favorites, dependent: :destroy
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -24,6 +25,10 @@ class User < ActiveRecord::Base
         user.email = data["email"] if user.email.blank?
       end
     end
+  end
+
+  def favorited(bookmark)
+    self.favorites.where(bookmark_id: bookmark.id).first
   end
 
 end

@@ -10,6 +10,7 @@ class BookmarksController < ApplicationController
 
   def index
     @bookmarks = Bookmark.all
+    @mybookmarks = Bookmark.where(user_id: current_user.id)
   end
 
   def show
@@ -18,8 +19,11 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
-
+    @bookmark = Bookmark.find(params[:id])
+    if @bookmark.destroy
+      redirect_to topics_path
+    else
+      flash[:error] = "Something went wrong"
+    end
   end
-
-
 end

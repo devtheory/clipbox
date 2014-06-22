@@ -1,13 +1,26 @@
+<script src="http://cdn.embed.ly/jquery.embedly-3.1.1.min.js" type="text/javascript"></script>
 <section class="top-section" style="padding-top:50px">
 <div class="container">
-  <h2>Clippings</h2>
+  <h1>Clippings</h1>
   <div class="row">
-    <% @bookmarks.each do |bookmark| %>
-      <div class="col-lg-4 col-sm-6 col-xs-12">
-          <%= link_to(image_tag("http://placehold.it/800x600&text=#{bookmark.link}"), bookmark.link, target: "_blank", class: 'thumbnail img-responsive') %>
+    <div class="tabbable tabs-left" style="color:white">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#all_bookmarks" data-toggle="tab" style="color:black">All Clippings</a></li>
+        <li><a href="#my_bookmarks" data-toggle="tab" style="color:black">My Clippings</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="all_bookmarks">
+          <%= render partial: "alltopics" %>
+        </div>
+        <div class="tab-pane" id="my_bookmarks">
+          <%= render partial: "mytopics" %>
+        </div>
       </div>
-    <% end %>
+    </div>
   </div>
 </div>
+<br />
+<br />
 <div class="clouds-bg"></div>
 </section>
+<script src="//cdn.embedly.com/widgets/platform.js"></script>
