@@ -5,7 +5,9 @@ Clipbox::Application.routes.draw do
   resources :users, only: [:index]
 
   resources :topics do 
-    resources :bookmarks
+    resources :bookmarks do
+      resources :favorites, only: [:create, :destroy]
+    end
   end
 
   devise_scope :user do

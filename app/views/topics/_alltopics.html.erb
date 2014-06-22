@@ -1,0 +1,12 @@
+<% @bookmarks.each do |bookmark| %>
+  <div class="col-md-6">
+      <p>
+        <a class="embedly-card" href=<%= bookmark.link %> data-card-theme="dark"></a>
+        <% if bookmark.user_id == current_user.id %>
+          <%= link_to "Delete", topic_bookmark_path(bookmark, bookmark.id), class: 'btn btn-danger', method: :delete %>
+        <% else %>
+          <%= render partial: "favorites/favorite", locals: {bookmark: bookmark, topic: bookmark.topic} %>
+        <% end %>
+      </p>
+  </div>
+<% end %>

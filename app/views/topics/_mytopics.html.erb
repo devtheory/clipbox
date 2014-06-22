@@ -1,0 +1,21 @@
+<div class="row">
+  <% @mybookmarks.each do |bookmark| %>
+    <div class="col-md-6">
+        <p>
+          <a class="embedly-card" href=<%= bookmark.link %> data-card-theme="dark"></a>
+          <%= link_to "Delete", topic_bookmark_path(bookmark, bookmark.id), class: 'btn btn-danger', method: :delete %>
+        </p>
+    </div>
+  <% end %>
+</div>
+
+<div class="row">
+  <% @favorites.each do |bookmark| %>
+    <div class="col-md-6">
+      <p>
+        <a class="embedly-card" href=<%= bookmark.link %> data-card-theme="dark"></a>
+        <%= render partial: "favorites/favorite", locals: {bookmark: bookmark, topic: bookmark.topic} %>
+      </p>
+    </div>
+  <% end %>
+</div>
