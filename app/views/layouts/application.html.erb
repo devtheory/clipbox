@@ -18,8 +18,7 @@
           <div class="collapse navbar-collapse navbar-ex1-collapse">
               <ul class="nav navbar-nav navbar-right">
                 <% if current_user %>
-                  <li><%= link_to "All boxes", topics_path %></li>
-                  <li><%= link_to "My clippings", users_path %></li>
+                  <li><%= link_to "Boxes", topics_path %></li>
                   <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
                 <% else %>
                   <li><%= link_to "Sign in", new_user_session_path %></li>
