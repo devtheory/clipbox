@@ -20,9 +20,4 @@ PRODUCTION_FACEBOOK_APP_SECRET: 'your facebook production app secret here'
 
 MAILGUN_SMTP_LOGIN: 'your mailgun smtp login here'
 
-<<<<<<< HEAD
 MAILGUN_SMTP_PASSWORD: 'your mailgun smtp password here'
-
-=======
-MAILGUN_SMTP_PASSWORD: 'your mailgun smtp password here'
->>>>>>> 0eb04403e18f9a639534f23d1e86a3e232d32434
